@@ -1,10 +1,10 @@
+import logging
 import os
 import time
 
 import requests
 import telegram
 from dotenv import load_dotenv
-import logging
 
 load_dotenv()
 
@@ -32,7 +32,7 @@ def parse_homework_status(homework):
         verdict = 'Работа взята в ревью.'
     else:
         verdict = ('Ревьюеру всё понравилось, можно '
-        'приступать к следующему уроку.')
+                   'приступать к следующему уроку.')
     return f'У вас проверили работу "{homework_name}"!\n\n{verdict}'
 
 
